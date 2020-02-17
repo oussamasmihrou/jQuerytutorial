@@ -1,0 +1,204 @@
+body{
+    position: relative;
+    margin: 0;
+    background-color: rgb(228, 228, 228);
+    display: grid;
+    font-family: 'Lacquer', sans-serif;
+    display: grid;
+    } 
+
+#log{
+    height:auto;
+    min-height: 50px;
+    width: 15%;
+    font-size: 0.6em;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    float: right;
+    border-bottom-left-radius: 15px;
+}
+code{
+    border: 1px black solid;
+    font-size:2em;
+    background-color: beige;
+}
+.cube{
+    opacity: 0.7;
+    font-family: 'Lacquer', sans-serif;
+    position: absolute;
+    height: auto;
+    width: 10%;
+    padding : 5px 0; 
+    background-color: white;
+    border-radius: 10px;
+    top:40%;
+    letter-spacing: 9px;
+    text-align: center;    
+    color: rgb(255, 255, 255);
+    text-align: center;
+    animation-name: animate_cube;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-duration: 3000ms;
+}
+#index2_text{
+    padding: 30% 10px;
+
+    position: relative;
+    float: right;
+    width: 300px;
+    font-size: 20;
+    height: 100%;
+    text-align: justify;
+    font-family: 'Indie Flower', cursive;
+}
+#button_container{
+    opacity: 0.1;
+    transition-property: opacity;
+    transition-delay: .2s;
+    transition-timing-function: ease-out;
+    transition-duration: .6s;
+    background-color: rgb(218, 218, 218);
+    padding: 5px 10px;
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    bottom: 0px;
+    margin: 0px;
+    
+}
+#button_container:hover{
+    opacity: 0.8;
+
+}
+
+.animation_button{
+    background-color: white;
+    border-radius: 10px;
+    width: 10%; 
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    height: 40px;
+    margin: 0 1%;
+}
+.animation_button:focus{
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+#Animate.animation_button{
+    background-color: rgb(44, 44, 44);
+    color: white;
+}
+@keyframes animate_cube{
+    0%{color:black; letter-spacing:   8px ;  background-color: white;          left: 0px;   width: 10%;}
+    50%{color:white;letter-spacing:  30px;  background-color: rgb(71, 28, 121);left: 33%;   width: 30%;}
+    100%{color:white;letter-spacing: 8px;   background-color: rgb(146, 62, 97);left: 89%;   width: 10%;}
+}
+#header{
+    height: 35px;     
+    text-align: center;
+    min-width: 100%;
+    background-color: rgba(255, 255, 255, 0.938);
+    padding: 10px 0px;
+    margin: 0px 0px;
+    position: fixed;       
+    top: -40px;
+    transition-property: all;
+    transition-delay: 50ms;
+    transition-duration: 150ms;
+    transition-timing-function: ease-in-out;
+    z-index: 2;
+    opacity: 0.5;
+}
+#header:hover{
+    height: 30px;
+    text-align: center;
+    min-width: 100%;
+    background-color: rgba(255, 255, 255, 0.938);    padding: 10px 0px;
+    margin: 0px 0px;
+    position: fixed;
+    top: 0;
+    opacity: 1;
+    }
+#menu{
+    top: 0;
+    left:0;
+    height:41px;
+    width: 50px;
+    background-image: url('file:///Users/macbookair/Desktop/Programmation%20web%20/Journal/img/menu%2020.12.38.png');
+    transition-property: all;
+    transition-delay: 100ms;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+    position: absolute;
+    background-size: 45px;
+    background-repeat: no-repeat;
+    border-bottom-right-radius: 10px;
+    content: none;
+    background-position-x: 5px;
+
+}
+#menu:hover{
+    background-color: rgba(151, 151, 151, 0.432);
+    height:1000px;
+    width: 300px;                                   /*     Annimation menu on hover      */
+    background-position-x: center;
+    border-bottom-right-radius: 10px;
+
+
+}
+.menuItem{
+    position: absolute;
+    font-size: 100%;
+    font-family: 'Bangers', cursive;
+    color: #000000c7;
+    width: 284px ;
+    height:30px;
+    border-radius:0px;
+    padding: 8px;
+    padding-top: 10px;
+    padding-bottom: 0;
+    text-decoration: none;
+    visibility: hidden;
+}
+#item1{
+    top:49px;
+    left:0;
+
+}
+#item2{
+    top:105px;
+    left:0;
+    
+}
+#item3{
+    top:160px;
+    left:0;
+
+        
+}
+
+.menuItem:hover{
+    background-color: rgba(0, 67, 252, 0.356);
+}
+
+
+
+#item4:hover{
+    background-color: rgba(218, 13, 13, 0.541);
+}
+
+#body{
+    min-height: 800px;
+    min-width: 100%;
+}
+
+#footer{
+    position: relative;
+    min-height: 50px;
+    min-width: 100%;
+    text-align: center;
+    padding: 10px 0px;
+    background-color:rgb(0, 0, 0);
+    display: block;
+}

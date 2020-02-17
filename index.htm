@@ -1,0 +1,113 @@
+<!Doctype html>
+<html>
+
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lacquer&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lacquer&display=swap" rel="stylesheet">
+        <link rel='stylesheet' href="css/main.css">
+        <title>JQeury tutorial</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <script src= 'js/jquery-3.4.1.min.js'></script>
+        <script>
+            function showitems(){
+                setTimeout(function fonction(){
+                    document.getElementById('item1').style.visibility='visible';
+                    document.getElementById('item2').style.visibility='visible';
+                    document.getElementById('item3').style.visibility='visible';
+                },100)
+            }
+            function hideitems(){
+                setTimeout(function fonction(){
+                    document.getElementById('item1').style.visibility='hidden';
+                    document.getElementById('item2').style.visibility='hidden';
+                    document.getElementById('item3').style.visibility='hidden';
+                },100)
+            }
+        </script>
+    </head>
+    <body>  
+        <div id="header">
+                <div id = 'menu' onmouseover="showitems()" onmouseout="hideitems()">
+                    <a class="menuItem" id='item1' href="index.htm" ><B>Main</B></a>
+                    <a class="menuItem" id='item2' href="index.htm" ><b>Facebook</b></a>
+                    <a class="menuItem" id='item3' href="index.htm" ><b>About</b></a>
+                </div>
+                <div id = 'log'></div>
+            </div>
+    
+        <div style ='width:100%;position:relative;top:50px; height:300px; background-image: linear-gradient(rgba(155, 73, 221, 0.795),rgba(165, 174, 179, 0.39)),url("img/index2.jpg");background-repeat: no-repeat;background-size: cover;'>
+            <div class='cube'> Welcome </div>
+        </div>
+        <div style ='width:100%;position: relative;top:30%; height: 600px;background-image: linear-gradient(rgba(196, 147, 189, 0.795),rgba(204, 213, 218, 0.87)),url("img/index3.jpg");background-repeat: no-repeat;background-size: cover;'>
+            <div id = 'index2_text'>
+                <h1>About this web site:</h1>
+                <p>I created this template locally hosted so that i can test my knowledges on jQuery
+                    And jQuery mobile. 
+                </p>
+            </div>
+       
+       
+   
+            <!--            Eesier way to access Css proproties of an element   -->
+    
+
+            <!-- Event handling of an html element  -->
+    <script>
+        $('.cube').mouseenter(function(){
+            setTimeout(function(){
+                $('.cube').css('background-color','rgb(62, 44, 77)');
+            },1000);                    // A two seconds delay
+
+           
+        });
+        $('.cube').mouseleave(function(){
+            $('.cube').css('background-color','white');
+        });
+    </script>
+    
+    <!--                Blur and focus events           -->
+    
+        
+    
+    <script>
+        
+        $(document).keypress(function(event)
+      {
+
+        key = String.fromCharCode(event.which)
+            if (key=='h')
+            {
+                $('#log').html('the event.wich proprety gives: '+event.which+'. By doing some changes you pressed :You pressed: ' + key)
+                $('.cube').hide('slow')}
+            if (key=='s')
+            {
+                $('#log').html('the event.wich proprety gives: '+event.which+'. By doing some changes you pressed :You pressed: ' + key)
+                $('.cube').show('slow')}
+            })
+    </script>
+
+            <!--                           Animation buttons handlers                                -->
+   
+    <footer id= 'button_container'>
+        <button   id = 'animate'     class="animation_button">Stop Animation</button>
+        <button   id = 'fadeIn'      class="animation_button">Fade in       </button>
+        <button   id = 'fadeOut'     class="animation_button">Fade out      </button>
+        <button   id = 'fadeToogle'  class="animation_button">Fade toogle   </button>
+        <button   id = 'fadeTo'     class="animation_button">Fade to 0.5    </button>
+        <button class="animation_button">zid chi haja</button>
+        <button class="animation_button">Chi hwayej</button>
+        <button class="animation_button">Chi hwayej</button>
+        
+    </footer>
+    <script>
+        $('#animate')   .click(function(){$('.cube').finish    ()})
+        $('#fadeIn')    .click(function(){$('.cube').fadeIn    (1000,1)})
+        $('#fadeOut')   .click(function(){$('.cube').fadeOut   (1000)})
+        $('#fadeToogle').click(function(){$('.cube').fadeToggle(1000)})
+        $('#fadeTo')    .click(function(){$('.cube').fadeTo    (400,0.5)})
+
+</script>
+ 
+</body>
+
+</html>
